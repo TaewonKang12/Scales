@@ -8,12 +8,12 @@ void draw() {
   for(int x =0 ; x<= 200 ; x+=20)
     scales(x,y);
   ellipse(mouseX,mouseY,10,10);//weird button thing
-  fill(random(0,255), random(0,255), random(0,255) );
+  fill(Math.random()*255,Math.random()*255, Math.random()*255 );
   ellipse(mouseX,mouseY,4,4);
   int sig = 90;
   int gis = 90;
   if (mousePressed && mouseButton == LEFT) {
-    fill(random(0,255),random(0,255),random(0,255)); // random
+    fill(Math.random()*255,Math.random()*255,Math.random()*255; // random
   } else if (mousePressed && mouseButton == RIGHT) {
     fill(255); // white
   } else {
@@ -23,9 +23,9 @@ void draw() {
 sig=(int)(Math.random()*200);
 gis=(int)(Math.random()*200);
 }
-  rect(sig+random(-5,5), gis+random(-5,5), 20, 20);//rectangle
+  rect(sig+Math.random()*10, gis+Math.random()*10, 20, 20);//rectangle
 }
-void scale(int x, int y) {
+void coolscale(int x, int y) {
 int size=1;
 int shade =0;
 while(size<20){
@@ -36,5 +36,6 @@ size++;//changing shape
 shade+=10;//changing color
 }
 }
+
 
 
