@@ -1,5 +1,5 @@
 void setup() {
-  size(200, 200);  //feel free to change the size
+  size(200, 200);  //feel free to change the big
   noLoop(); //stops the draw() function from repeating
 }
 void draw() {
@@ -26,16 +26,17 @@ gis=(int)(Math.random()*200);
   rect(sig+Math.random()*10, gis+Math.random()*10, 20, 20);//rectangle
 }
 void coolscale(int x, int y) {
-int size=1;
+int big=1;
 int shade =0;
-while(size<20){
+while(big<20){
   fill(255,255,255);
  stroke(mouseX/5+100-shade,mouseY/5+100-shade,255-mouseX/5-shade);//shading
-bezier((x-10)+size,(y-10)+size,((mouseX/100)+x+20),((mouseY/100)+y-20),((mouseX/100)+x+20),((mouseY/100)+y+20),(x+10)-size,(y+10)-size);//scales
-size++;//changing shape
+bezier((x-10)+big,(y-10)+big,((mouseX/100)+x+20),((mouseY/100)+y-20),((mouseX/100)+x+20),((mouseY/100)+y+20),(x+10)-big,(y+10)-big);//scales
+big++;//changing shape
 shade+=10;//changing color
 }
 }
+
 
 
 
