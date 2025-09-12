@@ -4,9 +4,11 @@ void setup() {
 }
 void draw() {
   background(50,50,50); 
-  for(int y =0 ; y<= 200 ; y+=20)
-  for(int x =0 ; x<= 200 ; x+=20)
+  for(int y =0 ; y<= 200 ; y+=20) {
+  for(int x =0 ; x<= 200 ; x+=20){
     scales(x,y);
+}
+}
   ellipse(mouseX,mouseY,10,10);//weird button thing
   fill(Math.random()*255,Math.random()*255, Math.random()*255 );
   ellipse(mouseX,mouseY,4,4);
@@ -36,6 +38,7 @@ big++;//changing shape
 shade+=10;//changing color
 }
 }
+
 
 
 
