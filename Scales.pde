@@ -1,11 +1,40 @@
 void setup() {
-  size(500, 500);  //feel free to change the size
+  size(200, 200);  //feel free to change the size
   noLoop(); //stops the draw() function from repeating
 }
 void draw() {
-  //your code here
+  background(50,50,50); 
+  for(int y =0 ; y<= 200 ; y+=20)
+  for(int x =0 ; x<= 200 ; x+=20)
+    scales(x,y);
+  ellipse(mouseX,mouseY,10,10);//weird button thing
+  fill(random(0,255), random(0,255), random(0,255) );
+  ellipse(mouseX,mouseY,4,4);
+  int sig = 90;
+  int gis = 90;
+  if (mousePressed && mouseButton == LEFT) {
+    fill(random(0,255),random(0,255),random(0,255)); // random
+  } else if (mousePressed && mouseButton == RIGHT) {
+    fill(255); // white
+  } else {
+    fill(0); //black
+  }
+  if((mouseX <= sig+10 && mouseX >= sig-10)&&(mouseY <= gis+10 && mouseY >= gis-10)){
+sig=(int)(Math.random()*200);
+gis=(int)(Math.random()*200);
+}
+  rect(sig+random(-5,5), gis+random(-5,5), 20, 20);//rectangle
 }
 void scale(int x, int y) {
-  //your code here
+int size=1;
+int shade =0;
+while(size<20){
+  fill(255,255,255);
+ stroke(mouseX/5+100-shade,mouseY/5+100-shade,255-mouseX/5-shade);//shading
+bezier((x-10)+size,(y-10)+size,((mouseX/100)+x+20),((mouseY/100)+y-20),((mouseX/100)+x+20),((mouseY/100)+y+20),(x+10)-size,(y+10)-size);//scales
+size++;//changing shape
+shade+=10;//changing color
 }
+}
+
 
