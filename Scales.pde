@@ -1,5 +1,6 @@
 void setup() {
   size(200, 200);  //feel free to change the big
+  noLoop(); //stops the draw() function from repeating
 }
 void draw() {
   background(50,50,50); 
@@ -37,3 +38,4 @@ big++;//changing shape
 shade+=10;//changing color
 }
 }
+
